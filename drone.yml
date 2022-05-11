@@ -1,0 +1,13 @@
+kind: pipeline
+name: example-pipeline
+platform:
+os: linux
+arch: amd64
+steps:
+- name: build
+image: gcc
+commands:
+- echo "hello word is building"
+- g++ -o hello helloworld.cpp
+- echo "hello word build success"
+- ./hello
